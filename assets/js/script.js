@@ -94,6 +94,11 @@ function iniciarJogo(){
 }
 
 let jogo = setInterval(iniciarJogo, 100);
+
+function newGame(){
+    document.location.reload(true);
+}
+
 // let canvas = document.getElementById("snake"); //criar elemento que irá rodar o jogo
 
 // let context = canvas.getContext("2d"); //....
