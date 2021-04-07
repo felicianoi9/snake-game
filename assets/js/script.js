@@ -75,13 +75,16 @@ function iniciarJogo(){
     if (direction == "up") snakeY -= box;
     if(direction == "down") snakeY += box;
 
+    let points = parseInt(document.getElementById("points").innerText);    
+
     if(snakeX != food.x || snakeY != food.y){
         snake.pop(); //pop tira o último elemento da lista
     }else{
         food.x = Math.floor(Math.random() * 15 +1) * box;
         food.y = Math.floor(Math.random() * 15 +1) * box;
+        points +=10;
     }
-    
+    document.getElementById("points").innerHTML = points;
     let newHead ={
         x: snakeX,
         y: snakeY
