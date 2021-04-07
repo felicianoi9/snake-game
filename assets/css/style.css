@@ -1,3 +1,12 @@
 body{
     background-color: #d4e7c1;
 }
+
+#snake{
+    margin: 0;
+    padding: 0;
+}
+
+.card-body{
+    background-color: lightgreen;
+}

@@ -1,41 +1,50 @@
 let canvas = document.getElementById("snake"); //criar elemento que irá rodar o jogo
 let context = canvas.getContext("2d"); //....
-let box = 32;
+let box = 2;
+let snake = []; //criar cobrinha como lista, já que ela vai ser uma série de coordenadas, que quando pintadas, criam os quadradinhos
+snake[0] ={
+    x: 8 * box,
+    y: 8 * box
+}
 
 function criarBG(){
     context.fillStyle = "lightgreen";
-    context.fillRect(0, 0, 16*box, 16*box); //desenha o retângulo usando x e y e a largura e altura setadas
+    context.fillRect(0, 0, 200*box, 200*box); //desenha o retângulo usando x e y e a largura e altura setadas
 }
 
-criarBG();
+function criarCobrinha (){
+    for(i = 0; i < snake.length; i++){
+        context.fillStyle = "green";
+        context.fillRect(snake[i].x, snake[i].y, 5*box, 5*box);
+    }
+}
 
-// let box = 32;
-// let snake = []; //criar cobrinha como lista, já que ela vai ser uma série de coordenadas, que quando pintadas, criam os quadradinhos
-// snake[0] ={
-//     x: 8 * box,
-//     y: 8 * box
-// }
-
-
-// let direction = "right";
 // let food ={
 //     x: Math.floor(Math.random() * 15 + 1) * box,
 //     y: Math.floor(Math.random() * 15 + 1) * box
-// }
-
-
-
-// function criarCobrinha (){
-//     for(i = 0; i < snake.length; i++){
-//         context.fillStyle = "green";
-//         context.fillRect(snake[i].x, snake[i].y, box, box);
-//     }
 // }
 
 // function drawFood (){
 //     context.fillStyle = "red";
 //     context.fillRect(food.x, food.y, box, box);
 // }
+
+
+
+
+criarBG();
+criarCobrinha();
+// drawFood();
+// let box = 32;
+// let snake = []; //criar cobrinha como lista, já que ela vai ser uma série de coordenadas, que quando pintadas, criam os quadradinhos
+
+
+// let direction = "right";
+
+
+
+
+
 
 // //quando um evento acontece, detecta e chama uma função
 // document.addEventListener('keydown', update);
