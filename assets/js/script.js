@@ -29,27 +29,23 @@ document.addEventListener('keydown', update);
 function changeDirect(){
     
     console.log(event.srcElement.id);
-    if(event.srcElement.id != 'right') direction = 'left';
-    if(event.srcElement.id != 'down') direction = 'up';
-    if(event.srcElement.id != 'left') direction = 'right';
-    if(event.srcElement.id != 'up') direction = 'down';
+    
+    if(event.srcElement.id == 'left' && direction != 'right') direction = 'left';
+    if(event.srcElement.id == 'up' && direction != 'down') direction = 'up';
+    if(event.srcElement.id == 'right' && direction != 'left') direction = 'right';
+    if(event.srcElement.id == 'down' && direction != 'up') direction = 'down';
+
 
 }
 
-function update(event){
-    
-    
+function update(event){    
+   
     if(event.keyCode == 37 && direction != 'right') direction = 'left';
     if(event.keyCode == 38 && direction != 'down') direction = 'up';
     if(event.keyCode == 39 && direction != 'left') direction = 'right';
     if(event.keyCode == 40 && direction != 'up') direction = 'down';
 
-    
-    // if(event.keyCode == 37 && direction != 'right') direction = 'left';
-    // if(event.keyCode == 38 && direction != 'down') direction = 'up';
-    // if(event.keyCode == 39 && direction != 'left') direction = 'right';
-    // if(event.keyCode == 40 && direction != 'up') direction = 'down';
-
+   
 }
 
 
@@ -98,4 +94,4 @@ function iniciarJogo(){
 }
 
 
-let jogo = setInterval(iniciarJogo, 200);
+let jogo = setInterval(iniciarJogo, 100);
