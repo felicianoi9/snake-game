@@ -1,4 +1,8 @@
 let canvas = document.getElementById("snake"); //criar elemento que irá rodar o jogo
+// let btnLeft = getElementById("left");
+// let btnRight = getElementById("right");
+// let btnUp = getElementById("up");
+// let btnDown = getElementById("down");
 let context = canvas.getContext("2d"); //....
 let box = 2;
 let snake = []; //criar cobrinha como lista, já que ela vai ser uma série de coordenadas, que quando pintadas, criam os quadradinhos
@@ -22,11 +26,30 @@ function criarCobrinha (){
 //quando um evento acontece, detecta e chama uma função
 document.addEventListener('keydown', update);
 
+function changeDirect(){
+    
+    console.log(event.srcElement.id);
+    if(event.srcElement.id != 'right') direction = 'left';
+    if(event.srcElement.id != 'down') direction = 'up';
+    if(event.srcElement.id != 'left') direction = 'right';
+    if(event.srcElement.id != 'up') direction = 'down';
+
+}
+
 function update(event){
+    
+    
     if(event.keyCode == 37 && direction != 'right') direction = 'left';
     if(event.keyCode == 38 && direction != 'down') direction = 'up';
     if(event.keyCode == 39 && direction != 'left') direction = 'right';
     if(event.keyCode == 40 && direction != 'up') direction = 'down';
+
+    
+    // if(event.keyCode == 37 && direction != 'right') direction = 'left';
+    // if(event.keyCode == 38 && direction != 'down') direction = 'up';
+    // if(event.keyCode == 39 && direction != 'left') direction = 'right';
+    // if(event.keyCode == 40 && direction != 'up') direction = 'down';
+
 }
 
 
