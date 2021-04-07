@@ -3,13 +3,13 @@ let context = canvas.getContext("2d"); //....
 let box = 2;
 let snake = []; //criar cobrinha como lista, já que ela vai ser uma série de coordenadas, que quando pintadas, criam os quadradinhos
 snake[0] ={
-    x: 8 * box,
-    y: 8 * box
+    x: 75 * box,
+    y: 35 * box
 }
 
 function criarBG(){
     context.fillStyle = "lightgreen";
-    context.fillRect(0, 0, 200*box, 200*box); //desenha o retângulo usando x e y e a largura e altura setadas
+    context.fillRect(0, 0, 150*box, 75*box); //desenha o retângulo usando x e y e a largura e altura setadas
 }
 
 function criarCobrinha (){
