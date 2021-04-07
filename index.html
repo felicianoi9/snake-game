@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Game</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/sticky-footer-navbar/">
+    <link rel="shortcut icon" href="./assets/img/logo-snake.png" type="image/x-icon">
+    
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <style>
+        .bd-placeholder-img {
+          font-size: 1.125rem;
+          text-anchor: middle;
+          -webkit-user-select: none;
+          -moz-user-select: none;
+          user-select: none;
+        }
+  
+        @media (min-width: 768px) {
+          .bd-placeholder-img-lg {
+            font-size: 3.5rem;
+          }
+        }
+    </style>
+    <link rel="stylesheet" href="./assets/css/sticky-footer-navbar.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+</head>
+
+<body class="d-flex flex-column h-100">
+
+
+    <header>
+        <!-- Fixed navbar -->
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img height="40" src="./assets/img/logo-snake.png" alt="">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                    aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Jogar</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Sobre</a>
+                        </li>
+                        
+                    </ul>
+                   
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Begin page content -->
+    <main class="flex-shrink-0">
+        <div class="container">
+            <h1 class="mt-5 text-center">Snake Game</h1>
+            <div class="card text-center border-success">
+                <div class="card-header bg-success border-success text-white text-center">
+                  Jogar
+                </div>
+                <div class="card-body ">
+                    <div class="row">
+                        <canvas id="snake" class="col-12"></canvas>
+                    </div>
+                    
+                </div>
+                <div class="card-footer bg-success text-dark border-success">
+                  <span class="text-warning">0</span> <span class="text-green-100">Pontos</span> 
+                </div>
+              </div>
+            
+            
+        </div>
+    </main>
+
+    <!-- Modal - Sobre -->
+    <div class="modal fade " id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable ">
+          <div class="modal-content border-success text-success">
+            <div class="modal-header border-success">
+              <h5 class="modal-title" id="staticBackdropLabel">O Jogo</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                O jogador alimenta a cobra e quando isso ocorre ela aumenta seu comprimento e, à medida que isso ocorre é preciso tomar cuidado para não morder o próprio rabo e morrer... rsrsrs!!
+
+            </div>
+            <div class="modal-footer border-success">
+              <button type="button" class="btn btn-success" data-bs-dismiss="modal">Entendi</button>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <footer class="footer mt-auto fixed-bottom py-3 bg-light">
+        <div class="container text-center">
+            <span class="text-muted ">Adaptação de Rogério Feliciano.</span>
+        </div>
+    </footer>
+
+    <script defer src="./assets/js/bootstrap.bundle.min.js"></script>
+    <script defer src="./assets/js/script.js"></script>
+</body>
+
+</html>
