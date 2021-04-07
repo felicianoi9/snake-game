@@ -27,9 +27,7 @@ function criarCobrinha (){
 document.addEventListener('keydown', update);
 
 function changeDirect(){
-    
-    console.log(event.srcElement.id);
-    
+   
     if(event.srcElement.id == 'left' && direction != 'right') direction = 'left';
     if(event.srcElement.id == 'up' && direction != 'down') direction = 'up';
     if(event.srcElement.id == 'right' && direction != 'left') direction = 'right';
